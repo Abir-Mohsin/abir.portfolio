@@ -1,0 +1,149 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --text: #333;
+    --light: #f4f7f6;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.bg-light {
+    background-color: var(--light);
+    padding: 60px 0;
+}
+
+/* Navigation */
+nav {
+    background: var(--primary);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { color: #fff; }
+.logo span { color: var(--accent); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    color: white;
+    padding-bottom: 50px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero-img img {
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.2);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Sections */
+section { padding: 80px 0; }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+/* Cards */
+.card, .edu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    background: var(--primary);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Contact Flex */
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero { flex-direction: column-reverse; text-align: center; }
+    nav ul { display: none; }
+    .hero-text h1 { font-size: 2rem; }
+}
